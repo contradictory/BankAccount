@@ -21,12 +21,14 @@ public class BankAccount {
 
     }
 
-    public void withdraw(int deduct) {
+    public boolean withdraw(int deduct) {
         if (balance >= deduct) {
             balance -= deduct;
             System.out.println("success");
+            return true;
         } else {
             System.out.println(customerName + ":" + String.valueOf(balance));
+            return false;
         }
     }
 
